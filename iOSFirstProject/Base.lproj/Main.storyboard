@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSFirstProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="1346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jobs" translatesAutoresizingMaskIntoConstraints="NO" id="Ueu-Ah-U2U">
+                                <rect key="frame" x="20" y="98" width="600" height="525"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-kq-Eqa">
+                                <rect key="frame" x="78" y="49" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pid-VC-nUo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ChangeLabelName:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="gWm-80-a2U"/>
+                                    <action selector="KeyboardDissmiss:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="y7f-eI-4Yp"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaH-0f-Jxd">
+                                <rect key="frame" x="20" y="53" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your name bellow and tap Do it button:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-hK-cB9">
+                                <rect key="frame" x="30" y="30" width="340.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-ru-g35">
+                                <rect key="frame" x="549" y="1296" width="71" height="30"/>
+                                <state key="normal" title="Close App"/>
+                                <connections>
+                                    <action selector="CloseThisApplication:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNX-le-gbi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjP-ti-SMB">
+                                <rect key="frame" x="260" y="49" width="32" height="30"/>
+                                <state key="normal" title="Do it"/>
+                                <connections>
+                                    <action selector="ChangeLabelName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4No-tP-Gip"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KEk-ru-g35" firstAttribute="top" secondItem="Ueu-Ah-U2U" secondAttribute="bottom" priority="250" constant="673" id="2eJ-30-myF"/>
+                            <constraint firstItem="Ueu-Ah-U2U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3ay-G8-ecm"/>
+                            <constraint firstItem="KEk-ru-g35" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7bg-9i-MEN"/>
+                            <constraint firstItem="1vf-kq-Eqa" firstAttribute="leading" secondItem="oaH-0f-Jxd" secondAttribute="trailing" constant="8" id="8Yh-cK-hH8"/>
+                            <constraint firstItem="Ueu-Ah-U2U" firstAttribute="top" secondItem="LjP-ti-SMB" secondAttribute="bottom" constant="-200" id="Fmw-1h-DQh"/>
+                            <constraint firstItem="oaH-0f-Jxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="I2C-cM-YfO"/>
+                            <constraint firstItem="1vf-kq-Eqa" firstAttribute="top" secondItem="a5a-hK-cB9" secondAttribute="bottom" constant="10" id="P50-qX-Rjc"/>
+                            <constraint firstItem="a5a-hK-cB9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="RoS-ok-awN"/>
+                            <constraint firstItem="Ueu-Ah-U2U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVd-YX-IOq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a5a-hK-cB9" secondAttribute="trailing" id="edk-IZ-8XW"/>
+                            <constraint firstItem="LjP-ti-SMB" firstAttribute="top" secondItem="a5a-hK-cB9" secondAttribute="bottom" constant="10" id="gWA-OH-vSO"/>
+                            <constraint firstItem="oaH-0f-Jxd" firstAttribute="top" secondItem="a5a-hK-cB9" secondAttribute="bottom" constant="15" id="jYJ-bX-q2G"/>
+                            <constraint firstItem="a5a-hK-cB9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rKf-jM-TAe"/>
+                            <constraint firstItem="LjP-ti-SMB" firstAttribute="leading" secondItem="1vf-kq-Eqa" secondAttribute="trailing" constant="8" id="ue3-4h-8bu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KEk-ru-g35" secondAttribute="bottom" constant="10" id="ycL-f0-ofD"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="640" height="1346"/>
+                    <connections>
+                        <outlet property="textField" destination="1vf-kq-Eqa" id="HFG-ZM-2WD"/>
+                        <outlet property="topLabel" destination="a5a-hK-cB9" id="LhD-T2-4Im"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jobs" width="660" height="880"/>
+    </resources>
 </document>
